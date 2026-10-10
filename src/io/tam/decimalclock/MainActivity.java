@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
  @Override public void onCreate(Bundle b){
   super.onCreate(b);
   getWindow().setStatusBarColor(Color.rgb(12,23,17));getWindow().setNavigationBarColor(Color.rgb(12,23,17));
-  ScrollView scroll=new ScrollView(this);
+  ScrollView scroll=new ScrollView(this);scroll.setFillViewport(true);scroll.setBackgroundColor(Color.rgb(12,23,17));
   LinearLayout root=new LinearLayout(this);root.setOrientation(LinearLayout.VERTICAL);root.setGravity(Gravity.CENTER);root.setPadding(dp(24),dp(60),dp(24),dp(40));root.setBackgroundColor(Color.rgb(12,23,17));
   root.setOnApplyWindowInsetsListener((v,insets)->{v.setPadding(dp(24),dp(32)+insets.getSystemWindowInsetTop(),dp(24),dp(24)+insets.getSystemWindowInsetBottom());return insets;});
   root.addView(text("DECIMAL CLOCK",18,0xff8caf97));

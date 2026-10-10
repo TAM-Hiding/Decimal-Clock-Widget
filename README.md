@@ -1,4 +1,4 @@
-# Decimal Clock 0.2
+# Decimal Clock 0.3
 
 A small native Android app and home-screen widget for Tomoki's decimal clock.
 No dependencies, ads, accounts, network access, or data collection.
@@ -12,6 +12,8 @@ Widgets, and choose Decimal Clock. The widget resizes and opens the clock when t
 Normal time is hidden by default. Enable Show normal time (app + widget) to
 display it under the decimal clock. Live widgets have no tick-status label.
 Install the new APK over the existing app to update while preserving settings.
+The app fills the screen with its dark background and centers the contents in
+the available height, retaining scrolling on smaller screens.
 
 ## Time
 Uses local wall-clock time, divided by a nominal 24-hour day.
