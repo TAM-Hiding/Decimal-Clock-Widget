@@ -12,7 +12,9 @@ public class ClockWidget extends AppWidgetProvider {
   boolean fast=c.getSharedPreferences("clock",0).getBoolean("fast",false);
   RemoteViews v=new RemoteViews(c.getPackageName(),R.layout.widget);
   v.setTextViewText(R.id.decimal,live?DecimalTime.format(now,fast):"—.—————");
-  v.setTextViewText(R.id.standard,live?now.format(DateTimeFormatter.ofPattern("h:mm:ss a",java.util.Locale.US))+" · "+(fast?"LIVE TICKS":"TICKS = 0"):"Tap to enable live updates");
+  boolean comparison=c.getSharedPreferences("clock",0).getBoolean("comparison",false);
+  v.setTextViewText(R.id.standard,live?now.format(DateTimeFormatter.ofPattern("h:mm:ss a",java.util.Locale.US)):"Tap to enable live updates");
+  v.setViewVisibility(R.id.standard,!live||comparison?android.view.View.VISIBLE:android.view.View.GONE);
   v.setOnClickPendingIntent(R.id.root,PendingIntent.getActivity(c,0,new Intent(c,MainActivity.class),PendingIntent.FLAG_IMMUTABLE|PendingIntent.FLAG_UPDATE_CURRENT));
   AppWidgetManager.getInstance(c).updateAppWidget(ids(c),v);
  }

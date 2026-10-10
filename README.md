@@ -1,4 +1,4 @@
-# Decimal Clock 0.1
+# Decimal Clock 0.2
 
 A small native Android app and home-screen widget for Tomoki's decimal clock.
 No dependencies, ads, accounts, network access, or data collection.
@@ -9,6 +9,9 @@ the app opening the file to install unknown apps, then complete installation.
 Open Decimal Clock. Tap Enable live widget, then Add home-screen widget.
 If widget pinning is unavailable, long-press an empty home-screen area, select
 Widgets, and choose Decimal Clock. The widget resizes and opens the clock when tapped.
+Normal time is hidden by default. Enable Show normal time (app + widget) to
+display it under the decimal clock. Live widgets have no tick-status label.
+Install the new APK over the existing app to update while preserving settings.
 
 ## Time
 Uses local wall-clock time, divided by a nominal 24-hour day.
@@ -19,7 +22,7 @@ seconds. Noon is 5.00000 and 9 PM is 8.75000. DST changes follow the local clock
 matches the original Pydroid clock; it does not normalize 23/25-hour DST dates.
 
 The open app samples every 43 ms. The normal widget updates at decimal-second
-boundaries, fixes the final digit at zero, and labels this TICKS = 0. Optional
+boundaries and fixes the final digit at zero. Optional
 fast mode updates every 216 ms, samples genuine tick values, and skips some
 digits naturally. Launcher redraw timing may vary; no high-frequency animation
 is guaranteed. All displayed values are recalculated from time, never accumulated.
