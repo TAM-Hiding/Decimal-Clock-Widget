@@ -1,0 +1,5 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="12dp" android:background="@drawable/background">
+ <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DECIMAL CLOCK" android:textSize="10sp" android:letterSpacing="0.2" android:textColor="#8CAF97"/>
+ <TextView android:id="@+id/decimal" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="0.00000" android:textSize="38sp" android:fontFamily="monospace" android:textColor="#9EFFBC" android:maxLines="1" android:autoSizeTextType="uniform" android:autoSizeMinTextSize="16sp" android:autoSizeMaxTextSize="38sp" android:autoSizeStepGranularity="1sp"/>
+ <TextView android:id="@+id/standard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tap to enable live updates" android:textSize="12sp" android:textColor="#AFBFB4"/>
+</LinearLayout>

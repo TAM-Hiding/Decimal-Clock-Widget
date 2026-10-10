@@ -1,0 +1,4 @@
+build/
+development.keystore
+*.apk
+!downloads/*.apk
