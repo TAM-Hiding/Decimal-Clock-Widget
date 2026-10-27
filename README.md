@@ -1,6 +1,6 @@
 # Decimal Clock 0.3
 
-A small native Android app and home-screen widget for Tomoki's decimal clock.
+A small native Android app and home-screen widget for a decimal clock.
 No dependencies, ads, accounts, network access, or data collection.
 
 ## Install
